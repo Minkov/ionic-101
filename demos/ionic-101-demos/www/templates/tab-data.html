@@ -7,8 +7,13 @@
       </label>
         <button class="button button-full button-balanced" ng-click="addItem()">Add</button>
       </li>
-      <li class="item" ng-repeat="item in data">
-          <i class=" ion-close-circled pull-right" ng-click="deleteItem(item.id)"></i>
+      <li class="item"
+          ng-repeat="item in data" 
+          on-swipe-right="isVisible=true"
+          on-swipe-left="isVisible=false"
+          style="display:block">
+          <button class="button button-assertive button-small pull-right" ng-show="isVisible"
+            ng-click="deleteItem(item.id)">Delete</button>
           {{item.text}}
       </li>
     </ul>

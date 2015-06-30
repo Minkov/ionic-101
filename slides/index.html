@@ -100,6 +100,24 @@
 						*	Ionic apps can be distributed through native app stores to be installed on devices by leveraging Apache Cordova
 					</script>
 				</section>
+        <section data-markdown>
+          <script type="text/template">
+            #Using Ionic
+            * What we need to use Ionic?
+              * http://nodejs.org
+              * Install ionic package:
+                
+                $ npm install -g ionic
+              
+              * Create an app
+                
+                $ ionic start APP_NANE APP_TEMPLATE
+
+              * Run the app
+                
+                $ ionic serve
+          </script>
+        </section>
 				<section data-markdown>
 					<script type="text/template">
 						#Ionic Features
@@ -162,15 +180,27 @@
 						##Live Demo
 					</script>
 				</section>
-				<section data-markdown>
-					<script type="text/template">
-						#Lets code a little
-						*	Create an app that visualizes data
-							*	The data is in JSON, located at http://localhost:3001/api
-								* `GET http://localhost:3001/api/data` returns an array of items
-								*	`POST http://localhost:3001/api/data` creates a new item
-					</script>
-				</section>
+        <section data-markdown>
+          <script type="text/template">
+            #Lets code a little
+            * Create an app that visualizes data
+              * The data is in JSON, located at http://localhost:3001/api
+                * `GET http://localhost:3001/api/data` returns an array of items
+                * `POST http://localhost:3001/api/data` creates a new item
+                * `DELETE http://localhost:3001/api/data/ID` deletes an item 
+          </script>
+        </section>
+        <section data-markdown class='section-slide'>
+          <script type="text/template">
+            #Creating app working with data
+            ##Live Demo
+          </script>
+        </section>
+        <section data-markdown class='title'>
+          <script type="text/template">
+            #Questions?
+          </script>
+        </section>
 			</div>
 		</div>
 		<script src="lib/js/head.min.js"></script>
