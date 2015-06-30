@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ionic 101: the hybrid mobile app platform</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!-- <link rel="stylesheet" href="css/minkovit-theme/minkovit.css"> -->
+		<link rel="stylesheet" href="css/theme/white.css">
+		<style>
+			.reveal{
+				color: #333;
+				font-family: 'Arial';
+				font-size: 34px;
+				/*background-image: url('imgs/bg.jpg');*/
+				background-repeat: no-repeat;
+				background-position: 0 50px;
+			}
+			.reveal .slides h1, .reveal .slides h2{
+				text-shadow: 3px 5px 15px #333;
+				text-transform: none;
+			}
+			.reveal .slides h1{
+				font-size:2em;
+				color: #333;
+			}
+			.reveal .slides h2{
+				font-size: 1.7em;
+				color: #666;
+			}
+
+			.reveal .slides .title h1{
+				font-size:2.3em;
+			}
+			.reveal .slides .title h2{
+				font-size: 1.9em;
+			}
+
+			.reveal .slides .section-slide h1{
+				font-size: 2em;
+			}
+			.reveal .slides .section-slide h2{
+				font-size: 1.4em;
+			}
+
+			.reveal .slides section code{
+				font-weight: bold;
+				font-family: 'Consolas'
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="title" data-markdown>
+					<script type="text/template">
+						#Ionic 101
+						##The hybrid mobile app platform
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						#Who am I?
+						<img src="imgs/minkov-avatar.jpg" style="float:left;margin-right:10px" width="30%" />
+						<div style="float:right;width:67%" />
+						*	Doncho Minkov
+							*	Senior Technical Trainer
+								@ Telerik Academy
+							*	Teaches **JavaScript**, **Mobile** and **.NET**
+							*	Contacts:
+								*	[http://minkov.it](http://minkov.it/ "http://minkov.it")
+								*	[http://github.com/minkov](http://github.com/minkov "http://github.com/minkov")
+								*	[donchominkov@gmail.com](mailto:donchominkov@gmail.com "donchominkov@gmail.com")
+						</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						#What is Ionic
+						*	A complete open-source SDK for hybrid mobile app development
+						*	Built on top of AngularJS and Cordova
+						*	Provides tools and services for developing hybrid mobile apps using web technologies like HTML5, CSS, and Sass
+						*	Ionic apps can be distributed through native app stores to be installed on devices by leveraging Apache Cordova
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						#Ionic Features
+						*	Ionic has a full support for:
+							*	A rich set of **UI components**: buttons, lists, tabs, forms, etc...
+							*	**Gestures**: swipe, tap, double-tap, hold, etc
+							*	Application **lifecycle**: loaded, enter, leave, beforeEnter, etc...
+							*	**Graphics** and **animations**: pure HTML5 Canvas
+							*	**Routing** and **history**
+					</script>
+				</section>
+				<section class="section-slide" data-markdown>
+					<script type="text/template">
+						#Ionic UI Components
+						##Emporing the Mobile with CSS3
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						#Ionic UI Components
+						*	Ionic has a rich set of UI components to provide native Look & Feel:
+							*	Native-looking buttons and form controls
+							*	Tabs and navigation
+							*	Transitions
+						*	Full list can be found at http://ionicframework.com/docs/components/
+					</script>
+				</section>
+				<section class="section-slide" data-markdown>
+					<script type="text/template">
+						#Ionic UI Components
+						##Live Demo
+					</script>
+				</section>
+			
+				<!-- gestures -->
+				<section class="section-slide" data-markdown>
+					<script type="text/template">
+						#Ionic Gestures
+						##Everybody likes touching!
+					</script>
+				</section>
+				<section>
+					<h1>Ionic Gestures</h1>
+				  <ul>  
+							<li>Support for `tap`, `double-tap`, `hold`
+								<pre><code>&lt;canvas on-tap="onTap($event)"
+        on-double-tap="onDoubleTap()
+        on-hold="onHold()">&lt;/canvas></code></pre>
+							</li>
+							<li>Support for `drag`, `swipe`
+							  <pre><code>&lt;canvas on-drag="onDrag($event)"
+        on-swipe="onSwipe()
+        on-swipe-left="onSwipeLeft()">&lt;/canvas></code></pre>
+		  			</li>
+					</ul>
+				</section>
+				<section class="section-slide" data-markdown>
+					<script type="text/template">
+						#Ionic Gestures
+						##Live Demo
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						#Lets code a little
+						*	Create an app that visualizes data
+							*	The data is in JSON, located at http://localhost:3001/api
+								* `GET http://localhost:3001/api/data` returns an array of items
+								*	`POST http://localhost:3001/api/data` creates a new item
+					</script>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+      /* globals Reveal */
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+
+</html>

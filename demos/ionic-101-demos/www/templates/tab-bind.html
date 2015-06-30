@@ -1,0 +1,15 @@
+<ion-view view-title="Data Binding">
+  <ion-content class="padding">
+    <ul class="list">
+      <li class="item item-checkbox">
+       <label class="checkbox">
+          <input type="checkbox" ng-model='isVisible'>
+       </label>
+       {{isVisible? 'Hide':'Show'}}
+      </li>
+    <li class="item">
+      <div ng-show="isVisible">Content</div>
+    </li>
+  </ul>
+  </ion-content>
+</ion-view>

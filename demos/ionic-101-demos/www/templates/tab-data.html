@@ -1,0 +1,16 @@
+<ion-view view-title="Data">
+  <ion-content>
+    <ul class="list" >
+      <li class="item">
+      <label class="item item-input">
+        <input type="text" ng-model="item.text" />
+      </label>
+        <button class="button button-full button-balanced" ng-click="addItem()">Add</button>
+      </li>
+      <li class="item" ng-repeat="item in data">
+          <i class=" ion-close-circled pull-right" ng-click="deleteItem(item.id)"></i>
+          {{item.text}}
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
